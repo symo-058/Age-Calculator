@@ -21,7 +21,7 @@ const outputYears = document.querySelector ('.output-years');
 let isValid = false;
 
 inputDay.addEventListener('input', function(){
-    if (+inputDay.value > 31 && +inputDay.value < 0) {
+    if (+inputDay.value > 31 || +inputDay.value < 0) {
         errorDay.textContent = 'Must be a valid day';
         inputDay.style.border = "1px solid hsl(0, 100%, 67%)";
         dayLable.style.color = 'hsl(0, 100%, 67%)';
@@ -52,7 +52,7 @@ inputDay.addEventListener('input', function(){
 });
 
 inputMonth.addEventListener('input', function(){
-    if (+inputMonth.value > 12 ) {
+    if (+inputMonth.value > 12 || +inputMonth.value < 0 ) {
         errorMonth.textContent = 'Must be a valid month';
         inputMonth.style.border = "1px solid hsl(0, 100%, 67%)";
         monthLable.style.color = 'hsl(0, 100%, 67%)';
